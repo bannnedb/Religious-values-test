@@ -1,0 +1,336 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+Mono:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>Religious Values Results</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+</head>
+<script type="application/javascript" src="ideologies.js">
+</script>
+
+<body>
+<h1>Religious Values Test</h1>
+<hr>
+
+<h1>Results</h1>
+
+<h2><span class="weight-300" id="a-label"></span></h2>
+<div class="axis">
+    <img id="img-catholic" src="value_images/Pro Catholic.png" height="128pt"/>
+    <div class="bar catholic" id="bar-catholic"><div class="text-wrapper" id="catholic"></div></div>
+    <div class="bar anticatholic" id="bar-anticatholic"><div class="text-wrapper" id="anticatholic"></div></div>
+    <img id="img-anticatholic" src="value_images/Anti Catholic.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="b-label"></span></h2>
+<div class="axis">
+    <img id="img-protestant" src="value_images/Pro Protestant.png" height="128pt"/>
+    <div class="bar protestant" id="bar-protestant"><div class="text-wrapper" id="protestant"></div></div>
+    <div class="bar antiprotestant" id="bar-antiprotestant"><div class="text-wrapper" id="antiprotestant"></div></div>
+    <img id="img-antiprotestant" src="value_images/Anti Protestant.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="c-label"></span></h2>
+<div class="axis">
+    <img id="img-orthodox" src="value_images/Pro Orthodox.png" height="128pt"/>
+    <div class="bar orthodox" id="bar-orthodox"><div class="text-wrapper" id="orthodox"></div></div>
+    <div class="bar antiorthodox" id="bar-antiorthodox"><div class="text-wrapper" id="antiorthodox"></div></div>
+    <img id="img-antiorthodox" src="value_images/Anti Orthodox.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="d-label"></span></h2>
+<div class="axis">
+    <img id="img-philosemitic" src="value_images/Philo Semitic.png" height="128pt"/>
+    <div class="bar philosemitic" id="bar-philosemitic"><div class="text-wrapper" id="philosemitic"></div></div>
+    <div class="bar antisemitic" id="bar-antisemitic"><div class="text-wrapper" id="antisemitic"></div></div>
+    <img id="img-antisemitic" src="value_images/Anti Semitic.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="e-label"></span></h2>
+<div class="axis">
+    <img id="img-islamophilic" src="value_images/Islamophilic.png" height="128pt"/>
+    <div class="bar islamophilic" id="bar-islamophilic"><div class="text-wrapper" id="islamophilic"></div></div>
+    <div class="bar islamophobic" id="bar-islamophobic"><div class="text-wrapper" id="islamophobic"></div></div>
+    <img id="img-islamophobic" src="value_images/Islamophobic.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="f-label"></span></h2>
+<div class="axis">
+    <img id="img-buddhist" src="value_images/Pro Buddhist.png" height="128pt"/>
+    <div class="bar buddhist" id="bar-buddhist"><div class="text-wrapper" id="buddhist"></div></div>
+    <div class="bar antibuddhist" id="bar-antibuddhist"><div class="text-wrapper" id="antibuddhist"></div></div>
+    <img id="img-antibuddhist" src="value_images/Anti Buddhist.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="g-label"></span></h2>
+<div class="axis">
+    <img id="img-pagan" src="value_images/Pro Pagan.png" height="128pt"/>
+    <div class="bar pagan" id="bar-pagan"><div class="text-wrapper" id="pagan"></div></div>
+    <div class="bar antipagan" id="bar-antipagan"><div class="text-wrapper" id="antipagan"></div></div>
+    <img id="img-antipagan" src="value_images/Anti Pagan.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="h-label"></span></h2>
+<div class="axis">
+    <img id="img-satanic" src="value_images/satanic.png" height="128pt"/>
+    <div class="bar satanic" id="bar-satanic"><div class="text-wrapper" id="satanic"></div></div>
+    <div class="bar divine" id="bar-divine"><div class="text-wrapper" id="divine"></div></div>
+    <img id="img-divine" src="value_images/divine.png" height="128pt"/>
+</div>
+<h2><span class="weight-300" id="i-label"></span></h2>
+<div class="axis">
+    <img id="img-religious" src="value_images/religious.png" height="128pt"/>
+    <div class="bar religious" id="bar-religious"><div class="text-wrapper" id="religious"></div></div>
+    <div class="bar atheistic" id="bar-atheistic"><div class="text-wrapper" id="atheistic"></div></div>
+    <img id="img-atheistic" src="value_images/atheistic.png" height="128pt"/>
+</div>
+
+<br><br>
+
+<h2 class="ideology">Closest Match: <span class="weight-300" id="ideology-label"></span></h1>
+
+<br><br>
+
+<canvas id="banner" width=800 height=1200 style="font-family:Noto+Sans+Mono"></canvas>
+<button class="button" onclick="location.href='index.html';" style="background-color: #333;">Back</button> <br>
+<script>
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+
+    function setBarValue(name, value) {
+        innerel = document.getElementById(name)
+        outerel = document.getElementById("bar-" + name)
+        outerel.style.width = (value + "%")
+        innerel.innerHTML = (value + "%")
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = "hidden"
+        }
+    }
+
+    leftArray = ["Catholic","Protestant","Orthodox","Jewish","Muslim","Buddhist","Pagan","Satanist","Religious"]
+    rightArray = ["Anti-Catholic","Anti-Protestant","Anti-Orthodox","Anti-Semitic","Islamophobic","Anti-Buddhist","Anti-Pagan","Didactic","Atheistic"]
+
+    function setLabel(val,axis) {
+        if (val >= 90) { return "Theocratic " + leftArray[axis] } else
+        if (val >= 80) { return "Fundamentalist " + leftArray[axis] } else
+        if (val >= 70) { return leftArray[axis] } else
+        if (val >= 60) { return "Secular " + leftArray[axis] } else
+        if (val > 40) { return "Neutral" } else
+        if (val > 30) { return "Somewhat " + rightArray[axis] } else
+        if (val > 20) { return rightArray[axis] } else
+        if (val > 10) { return "Extremely " + rightArray[axis] } else
+        	{return "Fanatically " + rightArray[axis]}
+    }
+
+    a  = getQueryVariable("a")
+    b  = getQueryVariable("b")
+    c  = getQueryVariable("c")
+    d  = getQueryVariable("d")
+    e  = getQueryVariable("e")
+    f  = getQueryVariable("f")
+    g  = getQueryVariable("g")
+    h  = getQueryVariable("h")
+    i1  = getQueryVariable("i")
+    a2 = 100-a;
+    b2 = 100-b;
+    c2 = 100-c;
+    d2 = 100-d;
+    e2 = 100-e;
+    f2 = 100-f;
+    g2 = 100-g;
+    h2 = 100-h;
+    i2 = 100-i1;
+
+    setBarValue("catholic", a)
+    setBarValue("anticatholic", a2)
+    setBarValue("protestant", b)
+    setBarValue("antiprotestant", b2)
+    setBarValue("orthodox", c)
+    setBarValue("antiorthodox", c2)
+    setBarValue("philosemitic", d)
+    setBarValue("antisemitic", d2)
+    setBarValue("islamophilic", e)
+    setBarValue("islamophobic", e2)
+    setBarValue("buddhist", f)
+    setBarValue("antibuddhist", f2)
+    setBarValue("pagan", g)
+    setBarValue("antipagan", g2)
+    setBarValue("satanic", h)
+    setBarValue("divine", h2)
+    setBarValue("religious", i1)
+    setBarValue("atheistic", i2)
+    
+
+    document.getElementById("a-label").innerHTML = setLabel(a, 0)
+    document.getElementById("b-label").innerHTML = setLabel(b, 1)
+    document.getElementById("c-label").innerHTML = setLabel(c, 2)
+    document.getElementById("d-label").innerHTML = setLabel(d, 3)
+    document.getElementById("e-label").innerHTML = setLabel(e, 4)
+    document.getElementById("f-label").innerHTML = setLabel(f, 5)
+    document.getElementById("g-label").innerHTML = setLabel(g, 6)
+    document.getElementById("h-label").innerHTML = setLabel(h, 7)
+    document.getElementById("i-label").innerHTML = setLabel(i1, 8)
+
+    ideology = ""
+    ideodist = Infinity
+    for (var i = 0; i < ideologies.length; i++) {
+        dist = 0
+        dist += Math.pow(Math.abs(ideologies[i].stats.cath - a), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.prot - b), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.orth - c), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.jews - d), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.islm - e), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.budd - f), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.pagn - g), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.satn - h), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.athe - i), 2)
+        if (dist < ideodist) {
+            ideology = ideologies[i].name
+            ideodist = dist
+        }
+    }
+    
+    document.getElementById("ideology-label").innerHTML = ideology
+
+    function createImage(src, x, y, w, h) {
+        img = new Image ()
+        img.src = src
+        img.onLoad = function() {
+            ctx.drawImage(img, x, y, w, h)
+        }
+    }
+
+    window.onload = function() {
+        var c = document.getElementById("banner")
+        var ctx = c.getContext("2d")
+        ctx.fillStyle = "#777"
+        ctx.fillRect(0,0,800,1200)
+
+        img = document.getElementById("img-catholic")
+        ctx.drawImage(img, 20, 120, 100, 100);
+        img = document.getElementById("img-anticatholic")
+        ctx.drawImage(img, 680, 120, 100, 100)
+        img = document.getElementById("img-protestant")
+        ctx.drawImage(img, 20, 240, 100, 100)
+        img = document.getElementById("img-antiprotestant")
+        ctx.drawImage(img, 680, 240, 100, 100)
+        img = document.getElementById("img-orthodox")
+        ctx.drawImage(img, 20, 360, 100, 100)
+        img = document.getElementById("img-antiorthodox")
+        ctx.drawImage(img, 680, 360, 100, 100)
+        img = document.getElementById("img-philosemitic")
+        ctx.drawImage(img, 20, 480, 100, 100)
+        img = document.getElementById("img-antisemitic")
+        ctx.drawImage(img, 680, 480, 100, 100)
+        img = document.getElementById("img-islamophilic")
+        ctx.drawImage(img, 20, 600, 100, 100)
+        img = document.getElementById("img-islamophobic")
+        ctx.drawImage(img, 680, 600, 100, 100)
+        img = document.getElementById("img-buddhist")
+        ctx.drawImage(img, 20, 720, 100, 100)
+        img = document.getElementById("img-antibuddhist")
+        ctx.drawImage(img, 680, 720, 100, 100)
+        img = document.getElementById("img-pagan")
+        ctx.drawImage(img, 20, 840, 100, 100)
+        img = document.getElementById("img-antipagan")
+        ctx.drawImage(img, 680, 840, 100, 100)
+        img = document.getElementById("img-satanic")
+        ctx.drawImage(img, 20, 960, 100, 100)
+        img = document.getElementById("img-divine")
+        ctx.drawImage(img, 680, 960, 100, 100)
+        img = document.getElementById("img-religious")
+        ctx.drawImage(img, 20, 1080, 100, 100)
+        img = document.getElementById("img-atheistic")
+        ctx.drawImage(img, 680, 1080, 100, 100)
+
+        ctx.fillStyle="#222"
+        ctx.fillRect(120, 130, 560, 80)
+        ctx.fillRect(120, 250, 560, 80)
+        ctx.fillRect(120, 370, 560, 80)
+        ctx.fillRect(120, 490, 560, 80)
+        ctx.fillRect(120, 610, 560, 80)
+        ctx.fillRect(120, 730, 560, 80)
+        ctx.fillRect(120, 850, 560, 80)
+        ctx.fillRect(120, 970, 560, 80)
+        ctx.fillRect(120, 1090, 560, 80)
+        ctx.fillStyle="#a98d0b"
+        ctx.fillRect(120, 134, 5.6*a-2, 72)
+        ctx.fillStyle="#a93b0b"
+        ctx.fillRect(682-5.6*a2, 134, 5.6*a2-2, 72)
+        ctx.fillStyle="#0b52a9"
+        ctx.fillRect(120, 254, 5.6*b-2, 72)
+        ctx.fillStyle="#a90b47"
+        ctx.fillRect(682-5.6*b2, 254, 5.6*b2-2, 72)
+        ctx.fillStyle="#5d0ba9"
+        ctx.fillRect(120, 374, 5.6*(100-c2)-2, 72)
+        ctx.fillStyle="#86a90b"
+        ctx.fillRect(682-5.6*c2, 374, 5.6*c2-2, 72)
+        ctx.fillStyle="#0b98a9" 
+        ctx.fillRect(120, 494, 5.6*d-2, 72)
+        ctx.fillStyle="#a90b0b"
+        ctx.fillRect(682-5.6*d2, 494, 5.6*d2-2, 72)
+        ctx.fillStyle="#194b05"
+        ctx.fillRect(120, 614, 5.6*e-2, 72)
+        ctx.fillStyle="#a90ba7"
+        ctx.fillRect(682-5.6*e2, 614, 5.6*e2-2, 72)
+        ctx.fillStyle="#efe761"
+        ctx.fillRect(120, 734, 5.6*f-2, 72)
+        ctx.fillStyle="#0ba96f"
+        ctx.fillRect(682-5.6*f2, 734, 5.6*f2-2, 72)
+        ctx.fillStyle="#7060b6"
+        ctx.fillRect(120, 854, 5.6*g-2, 72)
+        ctx.fillStyle="#eae398"
+        ctx.fillRect(682-5.6*g2, 854, 5.6*g2-2, 72)
+        ctx.fillStyle="#430303" 
+        ctx.fillRect(120, 974, 5.6*h-2, 72)
+        ctx.fillStyle="#ffe400"
+        ctx.fillRect(682-5.6*h2, 974, 5.6*h2-2, 72)
+        ctx.fillStyle="#ffffff"
+        ctx.fillRect(120, 1094, 5.6*i1-2, 72)
+        ctx.fillStyle="#000000" 
+        ctx.fillRect(682-5.6*i2, 1094, 5.6*i2-2, 72)
+        ctx.fillStyle="#000"
+        ctx.font="700 60px Bebas Neue"
+        ctx.textAlign="left"
+        ctx.fillText("Religious Values Test", 128, 75)
+        ctx.font="40px Noto Sans Mono"
+        ctx.textAlign="right"
+
+        ctx.font="50px Noto+Sans+Mono"
+        ctx.textAlign="left"
+        if (a  > 20) {ctx.fillText(a + "%", 130, 187.5)}
+        if (b     > 20) {ctx.fillText(b + "%", 130, 307.5)}
+        if ((100-c2)   > 20) {ctx.fillText((100-c2) + "%", 130, 427.5)}
+        if (d > 20) {ctx.fillText(d + "%", 130, 547.5)}
+        if (e  > 20) {ctx.fillText(e + "%", 130, 667.5)}
+        if (f > 20) {ctx.fillText(f + "%", 130, 787.5)}
+        if (g  > 20) {ctx.fillText(g + "%", 130, 907.5)}
+        if (h > 20) {ctx.fillText(h + "%", 130, 1027.5)}
+        if (i1  > 20) {ctx.fillText(i1 + "%", 130, 1147.5)}
+        ctx.textAlign="right"
+        if (a2    > 20) {ctx.fillText(a2 + "%", 670, 187.5)}
+        if (b2     > 20) {ctx.fillText(b2 + "%", 670, 307.5)}
+        if (c2 > 20) {ctx.fillText(c2 + "%", 670, 427.5)}
+        if (d2  > 20) {ctx.fillText(d2 + "%", 670, 547.5)}
+        if (e2    > 20) {ctx.fillText(e2 + "%", 670, 667.5)}
+        if (f2     > 20) {ctx.fillText(f2 + "%", 670, 787.5)}
+        if (g2 > 20) {ctx.fillText(g2 + "%", 670, 907.5)}
+        if (h2  > 20) {ctx.fillText(h2 + "%", 670, 1027.5)}
+        if (i2  > 20) {ctx.fillText(i2 + "%", 670, 1147.5)}
+
+        ctx.font="300 30px Noto+Sans+Mono"
+        ctx.textAlign="center"
+        ctx.fillText(document.getElementById("a-label").innerHTML, 400, 125)
+        ctx.fillText(document.getElementById("b-label").innerHTML, 400, 245)
+        ctx.fillText(document.getElementById("c-label").innerHTML, 400, 365)
+        ctx.fillText(document.getElementById("d-label").innerHTML, 400, 485)
+        ctx.fillText(document.getElementById("e-label").innerHTML, 400, 605)
+        ctx.fillText(document.getElementById("f-label").innerHTML, 400, 725)
+        ctx.fillText(document.getElementById("g-label").innerHTML, 400, 845)
+        ctx.fillText(document.getElementById("h-label").innerHTML, 400, 965)
+        ctx.fillText(document.getElementById("i-label").innerHTML, 400, 1085)
+    }
+    </script>
+</body>

@@ -1,0 +1,254 @@
+html {
+    background-color: #999999;
+    padding: 0px;
+}
+body {
+    width: 80%;
+    min-height: calc(100vh - 4em);
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #777777;
+    border-color: #555555;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 20px;
+}
+p, li {
+    color: #333333;
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    font-size: 16pt;
+    line-height: 1;
+    margin: 4pt;
+}
+a{
+    color: #2222DD;
+}
+a:hover{
+    color: #22DDDD;
+}
+p.value-description {
+    text-indent: -16pt;
+    margin-left: 20pt;
+}
+p.question {
+    margin: 16pt auto;
+    color: #222222;
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    font-weight: normal;
+    width: 70%;
+    min-width: 500pt;
+    min-height: 144pt;
+    background-color: #555555;
+    padding: 16pt;
+    border-radius: 16pt;
+    font-size: 36pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+h1 {
+    color: #111111;
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    font-size: 72pt;
+    text-align: center;
+    line-height: 72pt;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+}
+.ideology {
+    text-align: center;
+}
+h2 {
+    color: #333333;
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    font-size: 36pt;
+    line-height: 36pt;
+    margin-top: 12pt;
+    margin-bottom: 0pt;
+}
+li {
+    font-size: 16pt;
+    text-indent: 16pt;
+}
+a {
+    font-family: inherit;
+}
+img.center {
+    display: block;
+    margin: 1em auto;
+    width: 50%;
+    min-width: 500pt;
+}
+.button {
+    background-color: #1d79c4;
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    border: none;
+    border-radius: 8pt;
+    color: white;
+    padding: 8pt;
+    width: 50%;
+    min-width: 500pt;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 24pt;
+    margin: -2px auto;
+    cursor: pointer;
+}
+.small_button, .small_button_off {
+    background-color: #222;
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    border: none;
+    border-radius: 8pt;
+    color: white;
+    padding: 8pt;
+    width: 10%;
+    min-width: 100pt;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18pt;
+    margin: -2px auto;
+    cursor: pointer;
+}
+.small_button_off {
+    background-color: #ddd;
+    color: #555;
+    border: 2px solid #555;
+    cursor: not-allowed;
+    margin: -4px auto;
+}
+div.axis {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.bar {
+    height: 36pt;
+    line-height: 36pt;
+    padding: 8pt;
+    margin-top: 4pt;
+    margin-bottom: 4pt;
+    border-width: 4px;
+    border-right-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #111;
+    background-color: #555;
+    display: block;
+    width: 50%;
+}
+div.text-wrapper {
+    font-family: 'Noto+Sans+Mono', sans-serif;
+    font-size: 36pt;
+    line-height: 36pt;
+    color: #111;
+    display: inline-block;
+}
+div.catholic {
+    background-color: #a98d0b;
+    text-align: left;
+    border-right-style: solid;
+}
+div.anticatholic {
+    background-color: #a93b0b;
+    text-align: right;
+    border-left-style: solid;
+}
+div.protestant {
+    background-color: #0b52a9;
+    text-align: left;
+    border-right-style: solid;
+}
+div.antiprotestant {
+    background-color: #a90b47;
+    text-align: right;
+    border-left-style: solid;
+}
+div.orthodox {
+    background-color: #5d0ba9;
+    text-align: left;
+    border-right-style: solid;
+}
+div.antiorthodox {
+    background-color: #86a90b;
+    text-align: right;
+    border-left-style: solid;
+}
+div.philosemitic {
+    background-color: #0b98a9;
+    text-align: left;
+    border-right-style: solid;
+}
+div.antisemitic {
+    background-color: #a90b0b;
+    text-align: right;
+    border-left-style: solid;
+}
+div.islamophilic {
+    background-color: #194b05;
+    text-align: left;
+    border-right-style: solid;
+}
+div.islamophobic {
+    background-color: #a90ba7;
+    text-align: right;
+    border-left-style: solid;
+}
+div.buddhist {
+    background-color: #efe761;
+    text-align: left;
+    border-right-style: solid;
+}
+div.antibuddhist {
+    background-color: #0ba96f;
+    text-align: right;
+    border-left-style: solid;
+}
+div.pagan {
+    background-color: #7060b6;
+    text-align: left;
+    border-right-style: solid;
+}
+div.antipagan {
+    background-color: #eae398;
+    text-align: right;
+    border-left-style: solid;
+}
+div.satanic {
+    background-color: #430303;
+    text-align: left;
+    border-right-style: solid;
+}
+div.divine {
+    background-color: #ffe400;
+    text-align: right;
+    border-left-style: solid;
+}
+div.religious {
+    background-color: #ffffff;
+    text-align: left;
+    border-left-style: solid;
+}
+div.atheistic {
+    background-color: #000000;
+    text-align: right;
+    border-right-style: solid;
+}
+
+span.weight-300 {
+    font-weight: 300;
+}
+canvas {
+    border-color: #111;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8pt;
+    display: block;
+    margin: 8pt;
+    margin-left: auto;
+    margin-right: auto;
+}
