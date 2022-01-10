@@ -37,7 +37,7 @@ questions =
         ],
         [//2
             "All believers should be able to attain priesthood or an equivalent position.",
-            "I believe in the Doctrine of Sola Scripture.",
+            "I believe in the Doctrine of Sola Scriptura.",
         ],
         [//1
             "Works do not contribute to salvation.",
@@ -147,7 +147,7 @@ questions =
             "Religious people must be open minded.",
         ],
         [//2
-            "Reincartion is real.",
+            "Reincarnation is real.",
         ],
         [//1
             "Dualistic thought is harmful.",
@@ -164,7 +164,7 @@ questions =
             "Karma is not real.",
         ],
         [//-4
-            "The doctrines of Buddhism are shrouded in vaguery because they nonsensical.",
+            "The doctrines of Buddhism are shrouded in vaguery because they are nonsensical.",
             "Life is not meerly suffering.",
             "Buddhists are evil.",
         ]],[//Pagan
@@ -228,7 +228,7 @@ questions =
             "I would prefer to live under the laws of other religions than under the laws of an atheist",
         ],
         [//3
-            "So-called atheists are often the most supersticious people.",
+            "So-called atheists are often the most superstitious people.",
         ],
         [//2
             "Even agnosticism is deplorable and unacceptable.",
