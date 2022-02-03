@@ -14,45 +14,43 @@
 <hr>
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
 <p class="question" id="question-text"></p>
-<button class="button" onclick="next_question( 4)" style="background-color: #004705;">Strongly Agree</button> <br>
-<button class="button" onclick="next_question( 2)" style="background-color: #218025;">Agree</button> <br>
+<button class="button" onclick="next_question( 1)" style="background-color: #004705;">Strongly Agree</button> <br>
+<button class="button" onclick="next_question( 0.5)" style="background-color: #218025;">Agree</button> <br>
 <button class="button" onclick="next_question( 0)" style="background-color: #808080;">Neutral/Unsure</button> <br>
-<button class="button" onclick="next_question(-2)" style="background-color: #802121;">Disagree</button> <br>
-<button class="button" onclick="next_question(-4)" style="background-color: #470000;">Strongly Disagree</button> <br>
+<button class="button" onclick="next_question(-0.5)" style="background-color: #802121;">Disagree</button> <br>
+<button class="button" onclick="next_question(-1)" style="background-color: #470000;">Strongly Disagree</button> <br>
 <button class="small_button" onclick="prev_question()" id="back_button">Last Question</button>
 <button class="small_button_off" id="back_button_off">Last Question</button><br>
 
 
 <script>
-    var scores = [0, 0, 0, 0, 0, 0, 0, 0, 0];//fed, dem, glo, mil, fre, equ, sec, pro, mul - User's scores
+    var max_a, max_b, max_c, max_d, max_e, max_f, max_g, max_h, max_i; // Max possible scores
+    max_a = max_b = max_c = max_d = max_e = max_f = max_g = max_h = max_i = 0;
+    let a_array = new Array(questions.length);
+    let b_array = new Array(questions.length);
+    let c_array = new Array(questions.length);
+    let d_array = new Array(questions.length);
+    let e_array = new Array(questions.length);
+    let f_array = new Array(questions.length);
+    let g_array = new Array(questions.length);
+    let h_array = new Array(questions.length);
+    let i_array = new Array(questions.length);
     var qn = 0; // Question number
-    var answers = [];
-    var quests = [];
-    init_all_questions(quests);
-    init_question(quests);
-
-    function init_all_questions(qs) {
-        //1,2,3,-2,-4
-        for(var i = 0; i < 9; i++) //Number of Axes
-        {
-            for(var  j = 0; j < questions[i].length; j++)
-            {
-                for(var k = 0; k < questions[i][j].length; k++)
-                {
-                    var m = [i, j, k];
-                    qs.push(m);
-                }
-            }
-        }
-        shuffle(qs);
+    init_question();
+    for (var i = 0; i < questions.length; i++) {
+        max_a += Math.abs(questions[i].effect.a)
+        max_b += Math.abs(questions[i].effect.b)
+        max_c += Math.abs(questions[i].effect.c)
+        max_d += Math.abs(questions[i].effect.d)
+        max_e += Math.abs(questions[i].effect.e)
+        max_f += Math.abs(questions[i].effect.f)
+        max_g += Math.abs(questions[i].effect.g)
+        max_h += Math.abs(questions[i].effect.h)
+        max_i += Math.abs(questions[i].effect.i)
     }
-
     function init_question() {
-        var ax = quests[qn][0];
-        var rate = quests[qn][1];
-        var num = quests[qn][2];
-        document.getElementById("question-text").innerHTML = questions[ax][rate][num];
-        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (quests.length);
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
         if (qn == 0) {
             document.getElementById("back_button").style.display = 'none';
             document.getElementById("back_button_off").style.display = 'block';
@@ -63,63 +61,55 @@
 
     }
 
-    function shuffle(array) {
-      var currentIndex = array.length, temporaryValue, randomIndex;
-
-      // While there remain elements to shuffle...
-      while (0 !== currentIndex) {
-
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-      }
-
-      return array;
-    }
-
     function next_question(mult) {
-        var ax = quests[qn][0];
-        var rate = quests[qn][1];
-        var num = quests[qn][2];
-        scores[ax] += mult*(rate<4?1:-1);
-
-        answers[qn] = mult;
+        a_array[qn] = mult*questions[qn].effect.a
+        b_array[qn] = mult*questions[qn].effect.b
+        c_array[qn] = mult*questions[qn].effect.c
+        d_array[qn] = mult*questions[qn].effect.d
+        e_array[qn] = mult*questions[qn].effect.e
+        f_array[qn] = mult*questions[qn].effect.f
+        g_array[qn] = mult*questions[qn].effect.g
+        h_array[qn] = mult*questions[qn].effect.h
+        i_array[qn] = mult*questions[qn].effect.i
         qn++;
-        if (qn < quests.length) {
+        if (qn < questions.length) {
             init_question();
         } else {
             results();
         }
     }
+
     function prev_question() {
         if (qn == 0) {
             return;
         }
         qn--;
-        var ax = quests[qn][0];
-        var rate = quests[qn][1];
-        var num = quests[qn][2];
-        scores[ax] -= answers[qn]*(rate<4?1:-1);
         init_question();
     }
-    function calc_score(score) {
-        return (50+score);
+
+    function calc_score(score,max) {
+        return (100*(max+score)/(2*max)).toFixed(1)
     }
+
     function results() {
+        let final_a = a_array.reduce((a, b) => a + b, 0)
+        let final_b = b_array.reduce((a, b) => a + b, 0)
+        let final_c = c_array.reduce((a, b) => a + b, 0)
+        let final_d = d_array.reduce((a, b) => a + b, 0)
+        let final_e = e_array.reduce((a, b) => a + b, 0)
+        let final_f = f_array.reduce((a, b) => a + b, 0)
+        let final_g = g_array.reduce((a, b) => a + b, 0)
+        let final_h = h_array.reduce((a, b) => a + b, 0)
+        let final_i = i_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?a=${calc_score(scores[0])}`
-            + `&b=${calc_score(scores[1])}`
-            + `&c=${calc_score(scores[2])}`
-            + `&d=${calc_score(scores[3])}`
-            + `&e=${calc_score(scores[4])}`
-            + `&f=${calc_score(scores[5])}`
-            + `&g=${calc_score(scores[6])}`
-            + `&h=${calc_score(scores[7])}`
-            + `&i=${calc_score(scores[8])}`;
+            + `?a=${calc_score(final_a,max_a)}`
+            + `&b=${calc_score(final_b,max_b)}`
+            + `&c=${calc_score(final_c,max_c)}`
+            + `&d=${calc_score(final_d,max_d)}`
+            + `&e=${calc_score(final_e,max_e)}`
+            + `&f=${calc_score(final_f,max_f)}`
+            + `&g=${calc_score(final_g,max_g)}`
+            + `&h=${calc_score(final_h,max_h)}`
+            + `&i=${calc_score(final_i,max_i)}`
     }
 </script>
