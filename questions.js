@@ -10,7 +10,7 @@ questions =
         [//2
             "Mary is the mother of God.",
             "The only way to reverse a marriage is to have it annulled by the Catholic Church.",
-	    "Mortal and venial sins are legitimate concepts
+	    "Mortal and venial sins are legitimate concepts.",
         ],
         [//1
             "If a woman wants a position in the Church, she may become a nun.",
