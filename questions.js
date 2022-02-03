@@ -786,7 +786,7 @@ questions = [
     {
         "question": "Islam is a heretical sect of Christianity.",
         "effect": {
-            "a": 5,
+            "a": 0,
             "b": 0,
             "c": 0,
             "d": 0,
