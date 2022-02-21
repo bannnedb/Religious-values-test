@@ -104,7 +104,7 @@
         outerel = document.getElementById("bar-" + name)
         outerel.style.width = (value + "%")
         innerel.innerHTML = (value + "%")
-        if (innerel.offsetWidth + 10 > outerel.offsetWidth) {
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
             innerel.style.visibility = "hidden"
         }
     }
