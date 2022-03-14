@@ -208,6 +208,16 @@ div.antibuddhist {
     text-align: right;
     border-left-style: solid;
 }
+div.hindu {
+    background-color: #a9520b;
+    text-align: left;
+    border-right-style: solid;
+}
+div.antihindu {
+    background-color: #687dcd;
+    text-align: right;
+    border-left-style: solid;
+}
 div.pagan {
     background-color: #7060b6;
     text-align: left;
