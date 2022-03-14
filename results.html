@@ -57,6 +57,13 @@
     <div class="bar antibuddhist" id="bar-antibuddhist"><div class="text-wrapper" id="antibuddhist"></div></div>
     <img id="img-antibuddhist" src="value_images/Anti Buddhist.png" height="128pt"/>
 </div>
+<h2><span class="weight-300" id="x-label"></span></h2>
+<div class="axis">
+    <img id="img-prohindu" src="value_images/Pro Hindu.png" height="128pt"/>
+    <div class="bar prohindu" id="bar-prohindu"><div class="text-wrapper" id="prohindu"></div></div>
+    <div class="bar antihindu" id="bar-antihindu"><div class="text-wrapper" id="antihindu"></div></div>
+    <img id="img-antihindu" src="value_images/Anti Hindu.png" height="128pt"/>
+</div>
 <h2><span class="weight-300" id="g-label"></span></h2>
 <div class="axis">
     <img id="img-pagan" src="value_images/Pro Pagan.png" height="128pt"/>
@@ -109,8 +116,8 @@
         }
     }
 
-    leftArray = ["Catholic","Protestant","Orthodox","Jewish","Muslim","Buddhist","Pagan","Satanist","Religious"]
-    rightArray = ["Anti-Catholic","Anti-Protestant","Anti-Orthodox","Anti-Semitic","Islamophobic","Anti-Buddhist","Anti-Pagan","Didactic","Atheistic"]
+    leftArray = ["Catholic","Protestant","Orthodox","Jewish","Muslim","Buddhist","Hindu","Pagan","Satanist","Religious"]
+    rightArray = ["Anti-Catholic","Anti-Protestant","Anti-Orthodox","Anti-Semitic","Islamophobic","Anti-Buddhist","Anti-Hindu","Anti-Pagan","Didactic","Atheistic"]
 
     function setLabel(val,axis) {
         if (val >= 90) { return "Theocratic " + leftArray[axis] } else
@@ -130,6 +137,7 @@
     d  = getQueryVariable("d")
     e  = getQueryVariable("e")
     f  = getQueryVariable("f")
+    x  = getQueryVariable("x")
     g  = getQueryVariable("g")
     h  = getQueryVariable("h")
     i1  = getQueryVariable("i")
@@ -139,6 +147,7 @@
     d2 = 100-d;
     e2 = 100-e;
     f2 = 100-f;
+    x2 = 100-x;
     g2 = 100-g;
     h2 = 100-h;
     i2 = 100-i1;
@@ -155,6 +164,8 @@
     setBarValue("islamophobic", e2)
     setBarValue("buddhist", f)
     setBarValue("antibuddhist", f2)
+    setBarValue("hindu", x)
+    setBarValue("antihindu", x2)
     setBarValue("pagan", g)
     setBarValue("antipagan", g2)
     setBarValue("satanic", h)
@@ -169,9 +180,10 @@
     document.getElementById("d-label").innerHTML = setLabel(d, 3)
     document.getElementById("e-label").innerHTML = setLabel(e, 4)
     document.getElementById("f-label").innerHTML = setLabel(f, 5)
-    document.getElementById("g-label").innerHTML = setLabel(g, 6)
-    document.getElementById("h-label").innerHTML = setLabel(h, 7)
-    document.getElementById("i-label").innerHTML = setLabel(i1, 8)
+    document.getElementById("x-label").innerHTML = setLabel(x, 6)
+    document.getElementById("g-label").innerHTML = setLabel(g, 7)
+    document.getElementById("h-label").innerHTML = setLabel(h, 8)
+    document.getElementById("i-label").innerHTML = setLabel(i1, 9)
 
     ideology = ""
     ideodist = Infinity
@@ -183,6 +195,7 @@
         dist += Math.pow(Math.abs(ideologies[i].stats.jews - d), 3)
         dist += Math.pow(Math.abs(ideologies[i].stats.islm - e), 3)
         dist += Math.pow(Math.abs(ideologies[i].stats.budd - f), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.hind - x), 3)
         dist += Math.pow(Math.abs(ideologies[i].stats.pagn - g), 3)
         dist += Math.pow(Math.abs(ideologies[i].stats.satn - h), 3)
         dist += Math.pow(Math.abs(ideologies[i].stats.athe - i), 2)
@@ -206,7 +219,7 @@
         var c = document.getElementById("banner")
         var ctx = c.getContext("2d")
         ctx.fillStyle = "#777"
-        ctx.fillRect(0,0,800,1200)
+        ctx.fillRect(0,0,800,1320)
 
         img = document.getElementById("img-catholic")
         ctx.drawImage(img, 20, 120, 100, 100);
@@ -232,18 +245,23 @@
         ctx.drawImage(img, 20, 720, 100, 100)
         img = document.getElementById("img-antibuddhist")
         ctx.drawImage(img, 680, 720, 100, 100)
-        img = document.getElementById("img-pagan")
+        img = document.getElementById("img-hindu")
         ctx.drawImage(img, 20, 840, 100, 100)
-        img = document.getElementById("img-antipagan")
+        img = document.getElementById("img-hindu")
         ctx.drawImage(img, 680, 840, 100, 100)
-        img = document.getElementById("img-satanic")
+        img = document.getElementById("img-pagan")
         ctx.drawImage(img, 20, 960, 100, 100)
-        img = document.getElementById("img-divine")
+        img = document.getElementById("img-antipagan")
         ctx.drawImage(img, 680, 960, 100, 100)
-        img = document.getElementById("img-religious")
+        img = document.getElementById("img-satanic")
         ctx.drawImage(img, 20, 1080, 100, 100)
-        img = document.getElementById("img-atheistic")
+        img = document.getElementById("img-divine")
         ctx.drawImage(img, 680, 1080, 100, 100)
+        img = document.getElementById("img-religious")
+        ctx.drawImage(img, 20, 1200, 100, 100)
+        img = document.getElementById("img-atheistic")
+        ctx.drawImage(img, 680, 1200, 100, 100)
+
 
         ctx.fillStyle="#222"
         ctx.fillRect(120, 130, 560, 80)
@@ -255,6 +273,7 @@
         ctx.fillRect(120, 850, 560, 80)
         ctx.fillRect(120, 970, 560, 80)
         ctx.fillRect(120, 1090, 560, 80)
+        ctx.fillRect(120, 1210, 560, 80)
         ctx.fillStyle="#a98d0b"
         ctx.fillRect(120, 134, 5.6*a-2, 72)
         ctx.fillStyle="#a93b0b"
@@ -279,18 +298,22 @@
         ctx.fillRect(120, 734, 5.6*f-2, 72)
         ctx.fillStyle="#0ba96f"
         ctx.fillRect(682-5.6*f2, 734, 5.6*f2-2, 72)
+        ctx.fillStyle="#a9520b"
+        ctx.fillRect(120, 854, 5.6*x-2, 72)
+        ctx.fillStyle="#687dcd"
+        ctx.fillRect(682-5.6*x2, 854, 5.6*x2-2, 72)
         ctx.fillStyle="#7060b6"
-        ctx.fillRect(120, 854, 5.6*g-2, 72)
+        ctx.fillRect(120, 974, 5.6*g-2, 72)
         ctx.fillStyle="#eae398"
-        ctx.fillRect(682-5.6*g2, 854, 5.6*g2-2, 72)
+        ctx.fillRect(682-5.6*g2, 974, 5.6*g2-2, 72)
         ctx.fillStyle="#430303" 
-        ctx.fillRect(120, 974, 5.6*h-2, 72)
+        ctx.fillRect(120, 1094, 5.6*h-2, 72)
         ctx.fillStyle="#ffe400"
-        ctx.fillRect(682-5.6*h2, 974, 5.6*h2-2, 72)
+        ctx.fillRect(682-5.6*h2, 1094, 5.6*h2-2, 72)
         ctx.fillStyle="#ffffff"
-        ctx.fillRect(120, 1094, 5.6*i1-2, 72)
+        ctx.fillRect(120, 1214, 5.6*i1-2, 72)
         ctx.fillStyle="#000000" 
-        ctx.fillRect(682-5.6*i2, 1094, 5.6*i2-2, 72)
+        ctx.fillRect(682-5.6*i2, 1214, 5.6*i2-2, 72)
         ctx.fillStyle="#000"
         ctx.font="700 60px Bebas Neue"
         ctx.textAlign="left"
@@ -306,9 +329,10 @@
         if (d  > 40) {ctx.fillText(d + "%", 130, 547.5)}
         if (e  > 40) {ctx.fillText(e + "%", 130, 667.5)}
         if (f  > 40) {ctx.fillText(f + "%", 130, 787.5)}
-        if (g  > 40) {ctx.fillText(g + "%", 130, 907.5)}
-        if (h  > 40) {ctx.fillText(h + "%", 130, 1027.5)}
-        if (i1 > 40) {ctx.fillText(i1 + "%", 130, 1147.5)}
+        if (x  > 40) {ctx.fillText(x + "%", 130, 907.5)}
+        if (g  > 40) {ctx.fillText(g + "%", 130, 1027.5)}
+        if (h  > 40) {ctx.fillText(h + "%", 130, 1147.5)}
+        if (i1 > 40) {ctx.fillText(i1 + "%", 130, 1267.5)}
         ctx.textAlign="right"
         if (a2 > 40) {ctx.fillText(a2 + "%", 670, 187.5)}
         if (b2 > 40) {ctx.fillText(b2 + "%", 670, 307.5)}
@@ -316,9 +340,10 @@
         if (d2 > 40) {ctx.fillText(d2 + "%", 670, 547.5)}
         if (e2 > 40) {ctx.fillText(e2 + "%", 670, 667.5)}
         if (f2 > 40) {ctx.fillText(f2 + "%", 670, 787.5)}
-        if (g2 > 40) {ctx.fillText(g2 + "%", 670, 907.5)}
-        if (h2 > 40) {ctx.fillText(h2 + "%", 670, 1027.5)}
-        if (i2 > 40) {ctx.fillText(i2 + "%", 670, 1147.5)}
+        if (x  > 40) {ctx.fillText(x2 + "%", 670, 907.5)}
+        if (g2 > 40) {ctx.fillText(g2 + "%", 670, 1027.5)}
+        if (h2 > 40) {ctx.fillText(h2 + "%", 670, 1147.5)}
+        if (i2 > 40) {ctx.fillText(i2 + "%", 670, 1267.5)}
 
         ctx.font="300 30px Roboto"
         ctx.textAlign="center"
@@ -328,6 +353,7 @@
         ctx.fillText(document.getElementById("d-label").innerHTML, 400, 485)
         ctx.fillText(document.getElementById("e-label").innerHTML, 400, 605)
         ctx.fillText(document.getElementById("f-label").innerHTML, 400, 725)
+        ctx.fillText(document.getElementById("x-label").innerHTML, 400, 725)
         ctx.fillText(document.getElementById("g-label").innerHTML, 400, 845)
         ctx.fillText(document.getElementById("h-label").innerHTML, 400, 965)
         ctx.fillText(document.getElementById("i-label").innerHTML, 400, 1085)
