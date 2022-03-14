@@ -24,14 +24,15 @@
 
 
 <script>
-    var max_a, max_b, max_c, max_d, max_e, max_f, max_g, max_h, max_i; // Max possible scores
-    max_a = max_b = max_c = max_d = max_e = max_f = max_g = max_h = max_i = 0;
+    var max_a, max_b, max_c, max_d, max_e, max_f, max_x, max_g, max_h, max_i; // Max possible scores
+    max_a = max_b = max_c = max_d = max_e = max_f = max_x = max_g = max_h = max_i = 0;
     let a_array = new Array(questions.length);
     let b_array = new Array(questions.length);
     let c_array = new Array(questions.length);
     let d_array = new Array(questions.length);
     let e_array = new Array(questions.length);
     let f_array = new Array(questions.length);
+    let x_array = new Array(questions.length);
     let g_array = new Array(questions.length);
     let h_array = new Array(questions.length);
     let i_array = new Array(questions.length);
@@ -44,6 +45,7 @@
         max_d += Math.abs(questions[i].effect.d)
         max_e += Math.abs(questions[i].effect.e)
         max_f += Math.abs(questions[i].effect.f)
+        max_x += Math.abs(questions[i].effect.x)
         max_g += Math.abs(questions[i].effect.g)
         max_h += Math.abs(questions[i].effect.h)
         max_i += Math.abs(questions[i].effect.i)
@@ -68,6 +70,7 @@
         d_array[qn] = mult*questions[qn].effect.d
         e_array[qn] = mult*questions[qn].effect.e
         f_array[qn] = mult*questions[qn].effect.f
+        x_array[qn] = mult*questions[qn].effect.x
         g_array[qn] = mult*questions[qn].effect.g
         h_array[qn] = mult*questions[qn].effect.h
         i_array[qn] = mult*questions[qn].effect.i
@@ -98,6 +101,7 @@
         let final_d = d_array.reduce((a, b) => a + b, 0)
         let final_e = e_array.reduce((a, b) => a + b, 0)
         let final_f = f_array.reduce((a, b) => a + b, 0)
+        let final_x = x_array.reduce((a, b) => a + b, 0)
         let final_g = g_array.reduce((a, b) => a + b, 0)
         let final_h = h_array.reduce((a, b) => a + b, 0)
         let final_i = i_array.reduce((a, b) => a + b, 0)
@@ -108,6 +112,7 @@
             + `&d=${calc_score(final_d,max_d)}`
             + `&e=${calc_score(final_e,max_e)}`
             + `&f=${calc_score(final_f,max_f)}`
+            + `&x=${calc_score(final_x,max_x)}`
             + `&g=${calc_score(final_g,max_g)}`
             + `&h=${calc_score(final_h,max_h)}`
             + `&i=${calc_score(final_i,max_i)}`
