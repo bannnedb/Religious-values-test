@@ -1735,4 +1735,19 @@ questions = [
             "i": 20
         }
     },
+        {
+        "question": "The Hindu gods represent peace and virtue.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "x": 20,
+            "f": 0,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
 ];
