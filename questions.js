@@ -420,7 +420,7 @@ questions = [
         }
     },
     {
-        "question": "The Bishop of Rome having jurisdiction over the entire church is a major obstacle to unity between East and West.",
+        "question": "The Bishop of Rome should not have authority over the entire church.",
         "effect": {
             "a": -5,
             "b": 0,
