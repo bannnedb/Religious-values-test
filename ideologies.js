@@ -8,6 +8,7 @@ ideologies = [
             "jews": 10,
             "islm": 10,
             "budd": 10,
+            "hind": 10,
             "pagn": 0,
             "satn": 0,
             "athe": 100
@@ -22,7 +23,8 @@ ideologies = [
             "jews": 15,
             "islm": 10,
             "budd": 10,
-            "pagn": 5,
+            "hind": 10,
+            "pagn": 0,
             "satn": 0,
             "athe": 100
         }
@@ -36,6 +38,7 @@ ideologies = [
             "jews": 30,
             "islm": 10,
             "budd": 10,
+            "hind": 10,
             "pagn": 0,
             "satn": 0,
             "athe": 100
@@ -50,6 +53,7 @@ ideologies = [
             "jews": 10,
             "islm": 10,
             "budd": 10,
+            "hind": 10,
             "pagn": 0,
             "satn": 0,
             "athe": 100
@@ -64,6 +68,7 @@ ideologies = [
             "jews": 10,
             "islm": 100,
             "budd": 10,
+            "hind": 10,
             "pagn": 0,
             "satn": 0,
             "athe": 100
@@ -78,6 +83,7 @@ ideologies = [
             "jews": 100,
             "islm": 0,
             "budd": 10,
+            "hind": 10,
             "pagn": 0,
             "satn": 0,
             "athe": 100
@@ -92,8 +98,9 @@ ideologies = [
             "jews": 10,
             "islm": 10,
             "budd": 100,
-            "pagn": 0,
-            "satn": 0,
+            "hind": 60,
+            "pagn": 50,
+            "satn": 30,
             "athe": 80
         }
     },
@@ -105,9 +112,10 @@ ideologies = [
             "orth": 10,
             "jews": 10,
             "islm": 10,
-            "budd": 10,
+            "budd": 20,
+            "hind": 30,
             "pagn": 100,
-            "satn": 20,
+            "satn": 40,
             "athe": 100
         }
     },
@@ -119,8 +127,9 @@ ideologies = [
             "orth": 10,
             "jews": 10,
             "islm": 10,
-            "budd": 10,
-            "pagn": 20,
+            "budd": 20,
+            "hind": 20,
+            "pagn": 30,
             "satn": 100,
             "athe": 20
         }
@@ -134,6 +143,7 @@ ideologies = [
             "jews": 40,
             "islm": 40,
             "budd": 40,
+            "hind": 40,
             "pagn": 40,
             "satn": 40,
             "athe": 30
@@ -148,6 +158,7 @@ ideologies = [
             "jews": 10,
             "islm": 10,
             "budd": 10,
+            "hind": 10,
             "pagn": 10,
             "satn": 20,
             "athe": 10
@@ -162,6 +173,7 @@ ideologies = [
             "jews": 50,
             "islm": 10,
             "budd": 10,
+            "hind": 10,
             "pagn": 10,
             "satn": 10,
             "athe": 100
@@ -176,6 +188,7 @@ ideologies = [
             "jews": 10,
             "islm": 10,
             "budd": 60,
+            "hind": 50,
             "pagn": 20,
             "satn": 10,
             "athe": 50
@@ -189,23 +202,25 @@ ideologies = [
             "orth": 20,
             "jews": 0,
             "islm": 10,
-            "budd": 10,
+            "budd": 20,
+            "hind": 20,
             "pagn": 10,
             "satn": 20,
             "athe": 30
         }
     },
 	    {
-        "name": "Secular Jew",
+        "name": "Moderate Jew",
         "stats": {
-            "cath": 10,
-            "prot": 10,
-            "orth": 10,
+            "cath": 20,
+            "prot": 20,
+            "orth": 20,
             "jews": 50,
-            "islm": 10,
-            "budd": 10,
-            "pagn": 10,
-            "satn": 10,
+            "islm": 20,
+            "budd": 35,
+            "hind": 35,
+            "pagn": 30,
+            "satn": 20,
             "athe": 50
         }
     },
@@ -218,13 +233,14 @@ ideologies = [
             "jews": 40,
             "islm": 40,
             "budd": 40,
+            "hind": 40,
             "pagn": 40,
             "satn": 40,
             "athe": 50
         }
     },
 	    {
-        "name": "Catholic Theocrat",
+        "name": "Moderate Catholic",
         "stats": {
             "cath": 60,
             "prot": 30,
@@ -238,7 +254,7 @@ ideologies = [
         }
     },
 	    {
-        "name": "Secular Protestant",
+        "name": "Moderate Protestant",
         "stats": {
             "cath": 30,
             "prot": 60,
@@ -246,13 +262,14 @@ ideologies = [
             "jews": 30,
             "islm": 30,
             "budd": 30,
+            "hind": 30,
             "pagn": 30,
             "satn": 20,
             "athe": 60
         }
     },
 	    {
-        "name": "Eastern Orthodox Secularist",
+        "name": "Eastern Orthodox Moderate",
         "stats": {
             "cath": 30,
             "prot": 30,
@@ -260,13 +277,14 @@ ideologies = [
             "jews": 30,
             "islm": 30,
             "budd": 30,
+            "hind": 30,
             "pagn": 30,
             "satn": 20,
             "athe": 60
         }
     },
 	    {
-        "name": "Secular Muslim",
+        "name": "Moderate Muslim",
         "stats": {
             "cath": 30,
             "prot": 30,
@@ -274,6 +292,7 @@ ideologies = [
             "jews": 30,
             "islm": 60,
             "budd": 30,
+            "hind": 30,
             "pagn": 30,
             "satn": 30,
             "athe": 60
@@ -288,6 +307,7 @@ ideologies = [
             "jews": 40,
             "islm": 40,
             "budd": 40,
+            "hind": 40,
             "pagn": 40,
             "satn": 20,
             "athe": 70
@@ -302,6 +322,7 @@ ideologies = [
             "jews": 30,
             "islm": 30,
             "budd": 60,
+            "hind": 60,
             "pagn": 40,
             "satn": 30,
             "athe": 60
@@ -315,7 +336,8 @@ ideologies = [
             "orth": 30,
             "jews": 30,
             "islm": 30,
-            "budd": 30,
+            "budd": 40,
+            "hind": 40,
             "pagn": 60,
             "satn": 40,
             "athe": 60
@@ -330,6 +352,7 @@ ideologies = [
             "jews": 30,
             "islm": 30,
             "budd": 30,
+            "hind": 30,
             "pagn": 40,
             "satn": 60,
             "athe": 60
@@ -344,6 +367,7 @@ ideologies = [
             "jews": 60,
             "islm": 60,
             "budd": 60,
+            "hind": 60,
             "pagn": 60,
             "satn": 60,
             "athe": 60
@@ -358,9 +382,25 @@ ideologies = [
             "jews": 30,
             "islm": 30,
             "budd": 30,
+            "hind": 30,
             "pagn": 30,
             "satn": 30,
             "athe": 30
+        }
+    },
+	    {
+        "name": "Secular Hindu",
+        "stats": {
+            "cath": 30,
+            "prot": 30,
+            "orth": 30,
+            "jews": 30,
+            "islm": 30,
+            "budd": 30,
+            "hind": 65,
+            "pagn": 40,
+            "satn": 30,
+            "athe": 65
         }
     },
 	    {
@@ -371,8 +411,9 @@ ideologies = [
             "orth": 10,
             "jews": 10,
             "islm": 10,
-            "budd": 30,
-            "pagn": 70,
+            "budd": 70,
+            "hind": 90,
+            "pagn": 60,
             "satn": 10,
             "athe": 100
         }
