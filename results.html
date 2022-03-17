@@ -92,7 +92,7 @@
 
 <br><br>
 
-<canvas id="banner" width=800 height=1380 style="font-family:Noto+Sans+Mono"></canvas>
+<canvas id="banner" width=800 height=1440 style="font-family:Noto+Sans+Mono"></canvas>
 <button class="button" onclick="location.href='index.html';" style="background-color: #333;">Back</button> <br>
 <script>
     function getQueryVariable(variable)
@@ -219,7 +219,7 @@
         var c = document.getElementById("banner")
         var ctx = c.getContext("2d")
         ctx.fillStyle = "#777"
-        ctx.fillRect(0,0,800,1380)
+        ctx.fillRect(0,0,800,1440)
 
         img = document.getElementById("img-catholic")
         ctx.drawImage(img, 20, 120, 100, 100);
@@ -326,9 +326,9 @@
         ctx.font="700 60px Bebas Neue"
         ctx.textAlign="left"
         ctx.fillText("Religious Values Test", 128, 75)
-        ctx.font="700 60px Noto+Sans+Mono"
+        ctx.font="700 60px Roboto"
         ctx.textAlign="center"
-        ctx.fillText(ideology, 400, 1380)
+        ctx.fillText("Closest Match:" ideology, 400, 1400)
 
         ctx.font="50px Roboto"
         ctx.textAlign="left"
