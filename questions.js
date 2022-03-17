@@ -1110,6 +1110,51 @@ questions = [
         }
     },
     {
+        "question": "Hindus are bad people.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": -10,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "Hinduism is a false religion.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": -15,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "The core tennants of Hinduism are evil.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": -12,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
         "question": "All who do not attain oneness with all things are unenlightened.",
         "effect": {
             "a": 0,
