@@ -328,8 +328,11 @@
         ctx.fillText("Religious Values Test", 128, 75)
         ctx.font="700 60px Roboto"
         ctx.textAlign="center"
-        ctx.fillText("Closest Match:" ideology, 400, 1400)
-
+        ctx.fillText(ideology, 400, 1400)
+        ctx.font="700 20px Roboto"
+        ctx.textAlign="center"
+        ctx.fillText("Closest Match:", 400, 1350)
+        
         ctx.font="50px Roboto"
         ctx.textAlign="left"
         if (a  > 40) {ctx.fillText(a + "%", 130, 187.5)}
