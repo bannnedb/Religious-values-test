@@ -998,7 +998,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": 12,
-            "x": 0,
+            "x": 15,
             "g": 0,
             "h": 0,
             "i": 0
@@ -1029,6 +1029,81 @@ questions = [
             "e": 0,
             "f": 20,
             "x": 0,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "Hindu Theocracy is an ideal form of government.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": 10,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "All living creatures have souls.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": 15,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "There is a continuous cycle of life and death.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": 15,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "I enjoy the spiritual/religious ascpect of yoga.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": 7,
+            "g": 0,
+            "h": 0,
+            "i": 0
+        }
+    },
+    {
+        "question": "The cow is a sacred creature.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "x": 10,
             "g": 0,
             "h": 0,
             "i": 0
@@ -1073,7 +1148,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": -15,
-            "x": 0,
+            "x": -15,
             "g": 0,
             "h": 0,
             "i": 0
