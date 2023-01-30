@@ -1845,7 +1845,7 @@ questions = [
         }
     },
     {
-        "question": "Many of the Popes were viruous men.",
+        "question": "Many of the Popes were virtuous men.",
         "effect": {
             "a": 20,
             "b": 0,
@@ -1875,7 +1875,7 @@ questions = [
         }
     },
     {
-        "question": "Many of the Patriarchs of Eastern Europe were viruous men.",
+        "question": "Many of the Patriarchs of Eastern Europe were virtuous men.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1890,7 +1890,7 @@ questions = [
         }
     },
     {
-        "question": "Abraham, Isaac and Jacob were viruous men.",
+        "question": "Abraham, Isaac and Jacob were virtuous men.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1905,7 +1905,7 @@ questions = [
         }
     },
     {
-        "question": "Muhammad was a viruous man.",
+        "question": "Muhammad was a virtuous man.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1920,7 +1920,7 @@ questions = [
         }
     },
     {
-        "question": "Gautama Buddha was a viruous man.",
+        "question": "Gautama Buddha was a virtuous man.",
         "effect": {
             "a": 0,
             "b": 0,
