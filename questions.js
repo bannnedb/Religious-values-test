@@ -195,7 +195,7 @@ questions = [
         }
     },
     {
-        "question": "Martin Luther was a noble man opressed by a corrupt and evil authority.",
+        "question": "Martin Luther was a noble man oppressed by a corrupt and evil authority.",
         "effect": {
             "a": 0,
             "b": 20,
@@ -375,7 +375,7 @@ questions = [
         }
     },
     {
-        "question": "The essence of God trascends the energies of God to an infinite degree.",
+        "question": "The essence of God transcends the energies of God to an infinite degree.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -450,7 +450,7 @@ questions = [
         }
     },
     {
-        "question": "God is etirely immutable.",
+        "question": "God is entirely immutable.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -540,7 +540,7 @@ questions = [
         }
     },
     {
-        "question": "Israel's rightfull land spans from the Nile to the Euphraties.",
+        "question": "Israel's rightful land spans from the Nile to the Euphrates.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -570,7 +570,7 @@ questions = [
         }
     },
     {
-        "question": "For religious reasons, I support male circumsition.",
+        "question": "For religious reasons, I support male circumcision.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -735,7 +735,7 @@ questions = [
         }
     },
     {
-        "question": "Jesus is meerly a prophet.",
+        "question": "Jesus is merely a prophet.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -795,7 +795,7 @@ questions = [
         }
     },
     {
-        "question": "The kaaba is to be venerated.",
+        "question": "The Kaaba is to be venerated.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -915,7 +915,7 @@ questions = [
         }
     },
     {
-        "question": "Muhammed is not a legitimate prophet.",
+        "question": "Muhammad is not a legitimate prophet.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -930,7 +930,7 @@ questions = [
         }
     },
     {
-        "question": "Poligamy is immoral",
+        "question": "Polygamy is immoral",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1080,7 +1080,7 @@ questions = [
         }
     },
     {
-        "question": "I enjoy the spiritual/religious ascpect of yoga.",
+        "question": "I enjoy the spiritual/religious aspect of yoga.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1140,7 +1140,7 @@ questions = [
         }
     },
     {
-        "question": "The core tennants of Hinduism are evil.",
+        "question": "The core tenets of Hinduism are evil.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1215,7 +1215,7 @@ questions = [
         }
     },
     {
-        "question": "The doctrines of Buddhism are shrouded in vaguery because they are nonsensical.",
+        "question": "The doctrines of Buddhism are shrouded in vagueness because they are nonsensical.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1230,7 +1230,7 @@ questions = [
         }
     },
     {
-        "question": "Life is not meerly suffering.",
+        "question": "Life is not merely suffering.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1305,7 +1305,7 @@ questions = [
         }
     },
     {
-        "question": "Nature is divine and should be worshipped.",
+        "question": "Nature is divine and should be worshiped.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1545,7 +1545,7 @@ questions = [
         }
     },
     {
-        "question": "Satan is the embodyment of all that is evil and unjust.",
+        "question": "Satan is the embodiment of all that is evil and unjust.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1845,7 +1845,7 @@ questions = [
         }
     },
     {
-        "question": "Many of the Popes were viruous men.",
+        "question": "Many of the Popes were virtuous men.",
         "effect": {
             "a": 20,
             "b": 0,
@@ -1875,7 +1875,7 @@ questions = [
         }
     },
     {
-        "question": "Many of the Patriarchs of Eastern Europe were viruous men.",
+        "question": "Many of the Patriarchs of Eastern Europe were virtuous men.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1890,7 +1890,7 @@ questions = [
         }
     },
     {
-        "question": "Abraham, Isaac and Jacob were viruous men.",
+        "question": "Abraham, Isaac and Jacob were virtuous men.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1905,7 +1905,7 @@ questions = [
         }
     },
     {
-        "question": "Muhammad was a viruous man.",
+        "question": "Muhammad was a virtuous man.",
         "effect": {
             "a": 0,
             "b": 0,
@@ -1920,7 +1920,7 @@ questions = [
         }
     },
     {
-        "question": "Gautama Buddha was a viruous man.",
+        "question": "Gautama Buddha was a virtuous man.",
         "effect": {
             "a": 0,
             "b": 0,
