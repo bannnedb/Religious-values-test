@@ -91,7 +91,7 @@ questions =
             "I favour a Jewish Theocracy as a form of government.",
         ],
         [//2
-            "Israel's rightfull land spans from the Nile to the Euphraties.",
+            "Israel's rightful land spans from the Nile to the Euphraties.",
         ],
         [//1
             "Uncircumcised people go to hell.",
@@ -113,7 +113,7 @@ questions =
             "The Jews have deserved everything that has been done to them in the past 3500 years.",
         ]],[//Islam
 		[//4
-            "Jesus is meerly a prophet.",
+            "Jesus is merely a prophet.",
         ],
         [//3
             "Jerusalem should be a Muslim city.",
@@ -165,7 +165,7 @@ questions =
         ],
         [//-4
             "The doctrines of Buddhism are shrouded in vaguery because they nonsensical.",
-            "Life is not meerly suffering.",
+            "Life is not merely suffering.",
             "Buddhists are evil.",
         ]],[//Pagan
 		[//4
